@@ -26,11 +26,16 @@ button {
 
 .header {
     background: rgba(13, 34, 40, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .header__wrapper {
     display: flex;
     justify-content: space-between;
+   
 }
 
 .header__nav {
@@ -85,9 +90,8 @@ button {
 
 /* main */
 
-.main {
-    background: #00010154;
-
+.main{
+    background-image: url(../images/bg\ main.png);
 }
 
 .main__wrapper {
