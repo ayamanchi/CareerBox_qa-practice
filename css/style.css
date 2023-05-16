@@ -17,7 +17,8 @@ a {
 body {
     background: #0D2228;
 }
-button{
+
+button {
     color: transparent;
 }
 
@@ -32,7 +33,7 @@ button{
     justify-content: space-between;
 }
 
-.header__nav{
+.header__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,14 +47,14 @@ button{
     line-height: 27px;
     color: #FFFFFF;
     margin-left: 21px;
-    
+
 }
 
-.header__link:hover{
+.header__link:hover {
     color: #D1FF5D;
 }
 
-.header__link:not(:first-child):before{
+.header__link:not(:first-child):before {
     content: "|";
     margin-right: 21px;
     color: #D1FF5D;
@@ -76,7 +77,115 @@ button{
     margin-left: 23px;
 }
 
-.header__btn:hover{
+.header__btn:hover {
     background-color: #D1FF5D;
     color: #000000;
 }
+
+
+/* main */
+
+.main {
+    background: #00010154;
+
+}
+
+.main__wrapper {
+    padding: 102px 0 158px;
+}
+
+.main__title {
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 170px;
+    line-height: 206px;
+    text-align: center;
+    background: linear-gradient(180deg, #FFFFFF 0%, #D1FF5D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 41px;
+    position: relative;
+
+}
+
+.main__title::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 1px;
+    background-color: #D1FF5D;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+}
+
+.main__subtitle {
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    max-width: 782px;
+    margin: 0 auto;
+    margin-bottom: 85px;
+}
+
+
+.main__box {
+    display: flex;
+    justify-content: center;
+
+}
+
+.main__card {
+    width: 222px;
+    left: 0px;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4.38304px);
+    border-radius: 6.53059px;
+    position: relative;
+    text-align: center;
+
+}
+
+.main__card-first {
+    padding: 21px 33px 8px;
+}
+
+.main__card-center {
+    margin: 0 44px;
+    padding: 13px 12px 8px;
+}
+
+.main__card-last {
+    padding: 17px 31px 8px;
+}
+
+
+.main__img img {
+    margin-bottom: 6px;
+
+}
+
+.main__desc {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
