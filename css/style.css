@@ -35,7 +35,7 @@ button {
 .header__wrapper {
     display: flex;
     justify-content: space-between;
-   
+
 }
 
 .header__nav {
@@ -90,7 +90,7 @@ button {
 
 /* main */
 
-.main{
+.main {
     background-image: url(../images/bg\ main.png);
 }
 
@@ -193,3 +193,84 @@ button {
 }
 
 
+/* about */
+
+.about__wrapper {
+    display: flex;
+    padding-top: 67px;
+}
+
+
+
+.about__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 130px;
+    line-height: 118px;
+
+    text-transform: uppercase;
+    max-width: 496px;
+    color: #D1FF5D;
+    margin-bottom: 63px;
+    position: relative;
+    --color: white;
+}
+
+.about__title::before {
+    content: "about us";
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 223.663px;
+    line-height: 229px;
+    -webkit-text-stroke: 1px inherit;
+    mix-blend-mode: screen;
+    z-index: -1;
+    background: linear-gradient(180.05deg, rgba(255, 255, 255, 0.2) 0.05%, rgba(255, 255, 255, 0) 182.77%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    left: -250px;
+    top: -140px;
+
+
+    text-transform: uppercase;
+    position: absolute;
+}
+
+.about__txt {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #FFFFFF;
+    max-width: 740px;
+    position: relative;
+    margin: 40px 0;
+}
+
+.about__txt-line::after {
+    content: "";
+    position: absolute;
+    width: 740px;
+    height: 0px;
+    left: 0px;
+    top: -20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: block;
+
+}
+
+
+
+.about__img {
+    margin-left: 93px;
+    /* width: 503px; */
+}
+
+.about__img img {
+    /* width: 100%; */
+    /* height: 100%; */
+    object-fit: cover;
+}
