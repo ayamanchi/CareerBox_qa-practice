@@ -70,7 +70,7 @@ button {
     display: block;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 20px;
     line-height: 30px;
     color: #FFFFFF;
@@ -95,7 +95,7 @@ button {
 }
 
 .main__wrapper {
-    padding: 102px 0 158px;
+    padding: 206px 0 158px;
 }
 
 .main__title {
@@ -132,7 +132,7 @@ button {
 
     font-family: 'Inter', sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 28px;
     line-height: 30px;
     text-align: center;
@@ -184,7 +184,7 @@ button {
 .main__desc {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 24px;
     color: #FFFFFF;
     display: flex;
@@ -195,9 +195,10 @@ button {
 
 /* about */
 
-.about__wrapper {
+.about__wrapper-first {
     display: flex;
     padding-top: 67px;
+    position: relative;
 }
 
 
@@ -214,25 +215,25 @@ button {
     color: #D1FF5D;
     margin-bottom: 63px;
     position: relative;
-    --color: white;
+
 }
 
-.about__title::before {
+.about__wrapper-first::before {
     content: "about us";
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 223.663px;
     line-height: 229px;
-    -webkit-text-stroke: 1px inherit;
+    -webkit-text-stroke: 3px inherit;
     mix-blend-mode: screen;
     z-index: -1;
     background: linear-gradient(180.05deg, rgba(255, 255, 255, 0.2) 0.05%, rgba(255, 255, 255, 0) 182.77%);
     -webkit-background-clip: text;
     background-clip: text;
-    left: -250px;
-    top: -140px;
-
+    left: -180px;
+    top: -65px;
+    width: 976px;
 
     text-transform: uppercase;
     position: absolute;
@@ -241,7 +242,7 @@ button {
 .about__txt {
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 20px;
     line-height: 32px;
     color: #FFFFFF;
@@ -249,6 +250,8 @@ button {
     position: relative;
     margin: 40px 0;
 }
+
+
 
 .about__txt-line::after {
     content: "";
@@ -266,11 +269,332 @@ button {
 
 .about__img {
     margin-left: 93px;
-    /* width: 503px; */
+    padding-top: 299px;
+    width: 503px;
+    position: relative;
 }
 
 .about__img img {
-    /* width: 100%; */
-    /* height: 100%; */
+    width: 100%;
     object-fit: cover;
+    box-shadow: 0px 0px 0px 14px rgba(255, 255, 255, 0.17);
+    backdrop-filter: blur(10.1395px);
+    border-radius: 10px;
+    ;
+
 }
+
+.about__img::before {
+    content: url(../images/about-meeting.png);
+    width: 453px;
+    position: absolute;
+    top: 130px;
+    left: 100px;
+    z-index: -1;
+    box-shadow: 0px 0px 0px 14px rgba(255, 255, 255, 0.17);
+    height: 300px;
+    backdrop-filter: blur(10.1395px);
+    border-radius: 10px;
+}
+
+.about__img::after {
+    content: url(../images/green\ shadow\ img.png);
+    width: 621.9px;
+    position: absolute;
+    top: -55px;
+    left: -350px;
+    z-index: -2;
+}
+
+.about__wrapper-second {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 115px 0 130px;
+}
+
+.about__steps {
+    display: flex;
+}
+
+
+.about__question {
+    padding: 200px 0 0;
+}
+
+.about__question-txt {
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFFFFF;
+    width: 409px;
+    position: relative;
+}
+
+.about__question-txt::before {
+    content: url(../images/about-greenlight.png);
+    position: absolute;
+    left: -150px;
+    top: -580px;
+    z-index: -1;
+}
+
+.about__question-txt::after {
+    content: url(../images/about-absrtract.png);
+    position: absolute;
+    top: -280px;
+    left: -150px;
+    z-index: -1;
+}
+
+.about__question {
+    position: relative;
+}
+
+.about__question::before {
+    position: absolute;
+    content: "";
+    width: 611px;
+    height: 242px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10.1395px);
+    border-radius: 10px;
+    top: 170px;
+    left: -170px;
+    z-index: -1;
+}
+
+
+
+.about__steps img {
+    width: 88px;
+    height: 74px;
+    margin: 0 35px 0 89px;
+
+}
+
+.about__steps {
+    position: relative;
+}
+
+.about__steps:not(:last-child)::after {
+    content: url(../images/about-arrow.png);
+    position: absolute;
+    top: 90px;
+    left: 136px;
+}
+
+
+.about__subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.about__desc {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-bottom: 77px;
+}
+
+
+/* why */
+
+
+.why {
+    background: rgba(7, 22, 27, 1);
+}
+
+.why__wrapper {
+    padding: 107px 0 204px;
+    position: relative;
+}
+
+.why__title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 130px;
+    line-height: 118px;
+    text-transform: uppercase;
+    color: #D1FF5D;
+    margin-bottom: 127px;
+}
+
+.why__wrapper::before {
+    position: absolute;
+    content: "why us?";
+    font-family: 'Montserrat';
+    font-weight: 800;
+    font-size: 180px;
+    line-height: 160px;
+    -webkit-text-stroke: 3px inherit;
+    mix-blend-mode: screen;
+    background: linear-gradient(180.05deg, rgba(255, 255, 255, 0.2) 0.05%, rgba(255, 255, 255, 0) 182.77%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    left: -176px;
+    top: 0px;
+    width: 895px;
+    text-transform: uppercase;
+    position: absolute;
+}
+
+.why__cards {
+    display: flex;
+    justify-content: center;
+    margin-left: 29px;
+}
+
+.why__box {
+    width: 419px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10.1395px);
+    border-radius: 15.1075px;
+    position: relative;
+
+}
+
+.why__box::before {
+    content: "";
+    position: absolute;
+    width: 427px;
+    height: 430px;
+    top: 126px;
+    left: -29px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10.1395px);
+    border-radius: 15.1075px;
+    z-index: -1;
+}
+
+.why__box-first {
+    padding: 46px 21px 35px 51px;
+}
+
+.why__box-center {
+    padding: 42px 21px 35px 51px;
+    margin: 0 69px;
+}
+
+.why__box-last {
+    padding: 42px 21px 35px 51px;
+}
+
+
+.why__img {
+    margin-bottom: 42px;
+}
+
+.why__box-last img {
+    margin-bottom: 22px;
+}
+
+
+
+.why__subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-bottom: 23px;
+}
+
+.why__txt {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-bottom: 37px;
+}
+
+.why__btn {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 2.04px solid #D1FF5D;
+    width: 208px;
+    height: 50px;
+    border-radius: 3px;
+    margin-left: 23px;
+}
+
+.why__btn:hover {
+    background-color: #D1FF5D;
+    color: #000000;
+}
+
+
+
+/* countries */
+
+
+.countries{
+    background: linear-gradient(180deg, #FFFFFF 0%, #DFFFF7 100%);
+    height: 100vh;
+}
+
+.countries__wrapper{
+    /* position: relative; */
+}
+
+.countries__title{
+    font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: 800;
+font-size: 100px;
+line-height: 118px;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+color: #05664F;
+padding-top: 64px;
+position: relative;
+text-shadow: 0 0 2px #FFFFFF;
+}
+
+.countries__title::after{
+content: "Countr ies";
+font-family: 'Montserrat', sans-serif;
+font-weight: 800;
+font-size:137.13px;
+line-height: 162px;
+text-shadow: none;
+color: transparent;
+-webkit-text-stroke: 1px rgba(32, 51, 56, 0.16);
+width:700px;
+left: -130px;
+top: -60px;
+text-transform: uppercase;
+position: absolute;
+}
+
+.countries__title::before{
+    content: "";
+    width: 140px;
+    height: 3px;
+    border-bottom: 3px solid rgba(5, 102, 79, 1);
+    position: absolute;
+    top:65%;
+    left: -150px;
+}
+
