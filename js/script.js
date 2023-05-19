@@ -1,4 +1,4 @@
-var owl = $('.partners__logo');
+var owl = $('.owl-carousel');
 owl.owlCarousel({
     items:5,
     loop:true,
