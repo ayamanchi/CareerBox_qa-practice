@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+*::before , ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .container {
     max-width: 1456px;
     margin: 0 auto;
@@ -211,7 +217,8 @@ button {
 /* about */
 
 .about__wrapper-first {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding-top: 67px;
     position: relative;
 }
@@ -224,12 +231,11 @@ button {
     font-weight: 800;
     font-size: 130px;
     line-height: 118px;
-
     text-transform: uppercase;
     max-width: 496px;
     color: #D1FF5D;
     margin-bottom: 63px;
-    position: relative;
+
 
 }
 
@@ -279,65 +285,80 @@ button {
 
 }
 
+.about__wrap-img {
+    position: relative;
+}
 
+.about__wrap-img::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    right: 163px;
+    top: 261px;
+    width: 300px;
+    height: 300px;
+    -webkit-box-shadow: 7px 4px 200px 150px rgba(85, 201, 13, 0.2);
+    -moz-box-shadow: 7px 4px 200px 150px rgba(85, 201, 13, 0.2);
+    box-shadow: 7px 4px 200px 150px rgba(85, 201, 13, 0.2);
+    transform: rotate(12.27deg);
+}
+
+.about__laptop {
+    width: 513px;
+    height: 365px;
+    right: 68px;
+    top: 298px;
+}
+
+.about__meeting {
+    width: 481px;
+    height: 301px;
+    right: 23px;
+    top: 97px;
+    z-index: -1;
+}
 
 .about__img {
-    margin-left: 93px;
-    padding-top: 299px;
-    width: 503px;
-    position: relative;
+    position: absolute;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.17);
+    border: 1.13179px solid #FFFFFF;
+    backdrop-filter: blur(10.1395px);
+    border-radius: 10px;
 }
 
 .about__img img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
-    box-shadow: 0px 0px 0px 14px rgba(255, 255, 255, 0.17);
-    backdrop-filter: blur(10.1395px);
-    border-radius: 10px;
-    ;
-
-}
-
-.about__img::before {
-    content: url(../images/about-meeting.png);
-    width: 453px;
-    position: absolute;
-    top: 130px;
-    left: 100px;
-    z-index: -1;
-    box-shadow: 0px 0px 0px 14px rgba(255, 255, 255, 0.17);
-    height: 300px;
-    backdrop-filter: blur(10.1395px);
     border-radius: 10px;
 }
 
-.about__img::after {
-    content: url(../images/green\ shadow\ img.png);
-    width: 621.9px;
-    position: absolute;
-    top: -55px;
-    left: -350px;
-    z-index: -2;
-}
 
 .about__wrapper-second {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
     position: relative;
     padding: 115px 0 130px;
 }
 
-.about__steps {
-    display: flex;
+.about__wrapper-second::before {
+    content: '';
+    position: absolute;
+    top: 400px;
+    left: 100px;
+    -webkit-box-shadow: 7px 4px 200px 150px rgba(85, 201, 13, 0.2);
+    -moz-box-shadow: 7px 4px 200px 150px rgba(85, 201, 13, 0.2);
+    box-shadow: 7px 4px 200px 150px rgba(85, 201, 13, 0.2);
+    transform: rotate(12.27deg);
 }
 
-
-.about__question {
-    padding: 200px 0 0;
+.about__wrap{
+    position: relative;
 }
+
 
 .about__question-txt {
-
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -348,57 +369,50 @@ button {
     position: relative;
 }
 
-.about__question-txt::before {
-    content: url(../images/about-greenlight.png);
-    position: absolute;
-    left: -150px;
-    top: -580px;
-    z-index: -1;
-}
-
-.about__question-txt::after {
-    content: url(../images/about-absrtract.png);
-    position: absolute;
-    top: -280px;
-    left: -150px;
-    z-index: -1;
-}
 
 .about__question {
-    position: relative;
-}
-
-.about__question::before {
     position: absolute;
-    content: "";
+    top: 207px;
+    left: -160px;
+    padding: 31px 29px 31px 173px;
     width: 611px;
     height: 242px;
     background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(10.1395px);
     border-radius: 10px;
-    top: 170px;
-    left: -150px;
-    z-index: -1;
 }
 
+.about__abstract {
+    position: absolute;
+    top: 41px;
+    left: -232px;
+    width: 651px;
+    height: 641px;
+}
+
+.about__abstract img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
 
 .about__steps img {
     width: 88px;
     height: 74px;
-    margin: 0 35px 0 89px;
 
 }
 
 .about__steps {
     position: relative;
+    display: flex;
 }
 
 .about__steps:not(:last-child)::after {
     content: url(../images/about-arrow.png);
     position: absolute;
-    top: 90px;
-    left: 136px;
+    top: 92px;
+    left: 45px;
 }
 
 
@@ -855,6 +869,3 @@ button {
 .footer__icons-svg svg {
     margin-right: 30px;
 }
-
-
-/* media.css  */
