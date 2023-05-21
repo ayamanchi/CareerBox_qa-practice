@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-*::before , ::after{
+*::before,
+::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -135,7 +136,7 @@ button {
 .main__title::after {
     content: "";
     position: absolute;
-    width: 400px;
+    width: 100%;
     height: 1px;
     background-color: #D1FF5D;
     margin: 0 auto;
@@ -353,7 +354,7 @@ button {
     transform: rotate(12.27deg);
 }
 
-.about__wrap{
+.about__wrap {
     position: relative;
 }
 
@@ -373,7 +374,7 @@ button {
 .about__question {
     position: absolute;
     top: 207px;
-    left: -160px;
+    right: 6px;
     padding: 31px 29px 31px 173px;
     width: 611px;
     height: 242px;
@@ -679,6 +680,19 @@ button {
     position: absolute;
     top: 490px;
     left: 540px;
+}
+
+.countries__img{
+    position: relative;
+}
+
+.countries__img::after {
+    content: url(../images/countries-arrow.png);
+    top: 0;
+    left: 0;
+    width: 26px;
+    position: absolute;
+
 }
 
 
