@@ -43,7 +43,7 @@ button {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 50;
+    z-index: 100;
 }
 
 .header__wrapper {
@@ -103,6 +103,146 @@ button {
 .header__btn:hover {
     background-color: #D1FF5D;
     color: #000000;
+}
+
+
+/* header burger by codepen */
+
+.header__burger {
+    display: none;
+}
+
+
+.header__burger svg {
+    height: 80px;
+    position: absolute;
+    width: 80px;
+    z-index: 120;
+}
+
+.plates {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+
+.plate {
+    height: 80px;
+    width: 80px;
+}
+
+.burger {
+    filter: url(#gooeyness);
+}
+
+.x {
+    transform: scale(0);
+    transition: transform 400ms;
+}
+
+.line {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform-origin: 50%;
+    transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+}
+
+.x .line {
+    stroke-width: 5.5px;
+}
+
+.plate4 .x {
+    transition: transform 400ms;
+}
+
+.plate4 .line {
+    transform-origin: 50%;
+    transition: transform 400ms 100ms;
+}
+
+.active.plates .plate4 .line {
+    transition: transform 400ms;
+}
+
+.active.plates .plate4 .line1 {
+    transform: translateX(18px) translateY(-3px) rotate(-45deg) scale(.7);
+}
+
+.active.plates .plate4 .line2 {
+    transform: translateX(-18px) translateY(-3px) rotate(45deg) scale(.7);
+}
+
+.active.plates .plate4 .line3 {
+    transform: translateY(0px) rotate(45deg) scale(.7);
+}
+
+.active.plates .plate4 .line4 {
+    transform: translateY(0px) rotate(-45deg) scale(.7);
+}
+
+.active.plates .plate4 .line5 {
+    transform: translateX(18px) translateY(3px) rotate(45deg) scale(.7);
+}
+
+.active.plates .plate4 .line6 {
+    transform: translateX(-18px) translateY(3px) rotate(-45deg) scale(.7);
+}
+
+.active.plates .plate4 .x {
+    transition: transform 400ms 100ms;
+    transform: scale(1);
+}
+
+
+
+/* header nav media style  */
+
+
+.header__nav-media {
+    position: absolute;
+    padding: 93px 143px;
+    height: 0;
+    width: 100vw;
+    left: -15px;
+    top: -15px;
+    background: rgba(14, 35, 40, 0.4);
+    backdrop-filter: blur(7.5px);
+    opacity: 0;
+    transition: .5s linear;
+}
+
+
+.active+.header__nav-media {
+    height: 430px;
+    opacity: 1;
+    transition: 1s linear;
+}
+
+.header__link-media {
+    text-align: center;
+    margin-bottom: 23px;
+    width: 144px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+    border-bottom: 1px solid rgba(209, 255, 93, 1);
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: 0px 1px 0px #D1FF5D;
+}
+
+input:checked+label {
+    display: block;
+}
+
+.header__link-media:hover {
+    color: rgba(209, 255, 93, 1);
 }
 
 
@@ -658,47 +798,66 @@ button {
     margin-bottom: 10px;
 }
 
-.countries__img-america {
+.countries__marker {
+    padding: 6px 10px;
+    background-color: #D1FF5D;
+    border-radius: 9.98089px;
     position: absolute;
-    top: 434px;
-    left: 75px;
 }
 
-.countries__img-asia {
-    position: absolute;
-    top: 460px;
-    right: 115px;
-}
-
-.countries__img-europe {
-    position: absolute;
-    top: 320px;
-    left: 570px;
-}
-
-.countries__img-africa {
-    position: absolute;
-    top: 490px;
-    left: 540px;
-}
-
-.countries__img{
+.countries__cities {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 17px;
+    align-items: center;
+    letter-spacing: 0.0935709px;
+    color: #05664F;
     position: relative;
 }
 
-.countries__img::after {
+
+.countries__cities::before {
     content: url(../images/countries-arrow.png);
-    top: 0;
-    left: 0;
-    width: 26px;
     position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+
 
 }
+
+
+.countries__marker-america {
+    top: 446px;
+    left: 211px;
+}
+
+.countries__marker-europe {
+    top: 337px;
+    left: 672px;
+}
+
+
+.countries__marker-africa {
+    top: 497px;
+    left: 648px;
+}
+
+
+.countries__marker-asia {
+    top: 473px;
+    right: 236px;
+}
+
+
 
 
 /* partners */
 
 .partners {
+    overflow: hidden;
     background: radial-gradient(100.28% 100.28% at 50% 50%, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
 
@@ -760,14 +919,17 @@ button {
     object-fit: contain;
 }
 
-.partners-abstracr-right {
+
+
+.partners__abstracr-right {
     position: absolute;
     right: -155px;
     top: -410px;
     z-index: -1;
+
 }
 
-.partners-absrtact-left {
+.partners__absrtact-left {
     position: absolute;
     left: -155px;
     top: 282px;
@@ -882,4 +1044,19 @@ button {
 
 .footer__icons-svg svg {
     margin-right: 30px;
+}
+
+
+.footer__email {
+    cursor: pointer;
+}
+
+.footer__email:hover.footer__email path {
+    fill: #FFFFFF;
+    stroke: #05664F;
+
+}
+
+.footer__email:hover.footer__email rect {
+    fill: #05664F;
 }
